@@ -1,0 +1,58 @@
+{
+    'train': < PrefetchDataset shapes: ((), ()), types: (tf.string, tf.string) > ,
+    'validation': < PrefetchDataset shapes: ((), ()),
+    types: (tf.string, tf.string) > ,
+    'test': < PrefetchDataset shapes: ((), ()),
+    types: (tf.string, tf.string) >
+},
+tfds.core.DatasetInfo(
+      name = 'ted_hrlr_translate',
+      full_name = 'ted_hrlr_translate/pt_to_en/1.0.0',
+
+      description = """
+      Data sets derived from TED talk transcripts
+      for comparing similar language pairs where one is high resource and the other is low resource.
+      """,
+
+      config_description = """
+      Translation dataset from pt to en in plain text.
+      """,
+
+      homepage = 'https://github.com/neulab/word-embeddings-for-nmt',
+      data_path = 'C:\\Users\\MoonMoon-He\\tensorflow_datasets\\ted_hrlr_translate\\pt_to_en\\1.0.0',
+      download_size = 124.94 MiB,
+      dataset_size = 10.89 MiB,
+      features = Translation({
+          'en': Text(shape = (), dtype = tf.string),
+          'pt': Text(shape = (), dtype = tf.string),
+      }),
+      supervised_keys = ('pt', 'en'),
+      disable_shuffling = False,
+      splits = {
+          'test': < SplitInfo num_examples = 1803, num_shards = 1 > ,
+          'train': < SplitInfo num_examples = 51785, num_shards = 1 > ,
+          'validation': < SplitInfo num_examples = 1193, num_shards = 1 > ,
+      },
+      citation = ""
+      "@inproceedings{Ye2018WordEmbeddings,
+      author = {
+          Ye,
+          Qi and Devendra,
+          Sachan and Matthieu,
+          Felix and Sarguna,
+          Padmanabhan and Graham,
+          Neubig
+      },
+      title = {
+          When and Why are pre - trained word embeddings useful
+          for Neural Machine Translation
+      },
+      booktitle = {
+          HLT - NAACL
+      },
+      year = {
+          2018
+      },
+  }
+  """,
+)
